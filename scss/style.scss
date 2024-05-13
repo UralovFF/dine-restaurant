@@ -1,0 +1,807 @@
+@import url(https://fonts.googleapis.com/css?family=League+Spartan:100,200,300,regular,500,600,700,800,900);
+
+@import "./reset";
+@import "./mixins";
+
+body {
+    font-family: "League Spartan", sans-serif;
+    overflow-x: hidden;
+    .header {
+        height: 820px;
+        background: #17192b url(../img/header-bg.jpg) no-repeat right top;
+        background-size: cover;
+        .container {
+            @include container;
+            .header__body {
+                padding-top: 65px;
+                .header__body__info {
+                    max-width: 507px;
+                    .header__info__title {
+                        margin-top: 153px;
+                        margin-bottom: 10px;
+                        color: #fff;
+                        font-size: 80px;
+                        font-weight: 300;
+                        line-height: 100%;
+                        letter-spacing: -0.01em;
+                    }
+                    .header__info__text {
+                        margin-bottom: 40px;
+                        color: #fff;
+                        font-size: 20px;
+                        line-height: 150%;
+                    }
+                    .header__info__btn {
+                        @include main__btn;
+                        
+                        background: transparent;
+                        border: 1px solid #fff;
+                    }
+                }
+            }
+        }
+    }
+    .main {
+        .enjoyable-place {
+            margin-bottom: 121px;
+            position: relative;
+            .enjoyable-place__pattern {
+                @include section__pattern;
+                
+                position: absolute;
+                top: 250px;
+                
+                border-radius: 0 100px 0 0;
+            }
+            .container {
+                @include container;
+                .enjoyable-place__body {
+                    display: flex;
+                    justify-content: space-between;
+                    .enjoyable-place__body__img {
+                        height: 650px;
+                        
+                        transform: translateY(-70px);
+                        picture {
+                            .enjoyable-place__img {
+                                box-shadow: 0 75px 100px -50px rgba(56, 66, 85, 0.5);
+                            }
+                        }
+                    }
+                    .enjoyable-place__body__info {
+                        margin-top: 177px;
+                        max-width: 445px;
+                        .enjoyable-place__info__pattern {
+                            @include info__pattern;
+                            .pattern__oval {
+                                @include pattern__oval;
+                            }
+                            .pattern__line {
+                                @include pattern__line;
+                            }
+                        }
+                        .enjoyable-place__info__title {
+                            @include h2__title;
+                        }
+                        .enjoyable-place__info__text {
+                            @include main__text;
+                            color: #242b37;
+                        }
+                    }
+                }
+            }
+        }
+        .locally-food {
+            position: relative;
+            .locally-food__pattern {
+                @include section__pattern;
+                
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                
+                z-index: -1;
+                
+                border-radius: 100px 0 0;
+            }
+            .container {
+                @include container;
+                .locally-food__body {
+                    height: 640px;
+                    
+                    display: flex;
+                    justify-content: space-between;
+                    .locally-food__body__info {
+                        margin-top: 200px;
+                        max-width: 445px;
+                        .locally-food__info__pattern {
+                            @include info__pattern;
+                            .pattern__oval {
+                                @include pattern__oval;
+                            }
+                            .pattern__line {
+                                @include pattern__line;
+                            }
+                        }
+                        .locally-food__info__title {
+                            @include h2__title;
+                        }
+                        .locally-food__info__text {
+                            @include main__text;
+                        }
+                    }
+                    .locally-food__body__img {
+                        position: relative;
+                        .locally-food__img__pattern {
+                            position: absolute;
+                            top: 284px;
+                            right: -114px;
+                        }
+                    }
+                }
+            }
+        }
+        .our-menu {
+            background: #111;
+            
+            padding: 200px 0 120px;
+            .container {
+                @include container;
+                .our-menu__body {
+                    display: flex;
+                    justify-content: space-between;
+                    .our-menu__body__info {
+                        max-width: 445px;
+                        .our-menu__info__pattern {
+                            @include info__pattern;
+                            .pattern__oval {
+                                @include pattern__oval;
+                            }
+                            .pattern__line {
+                                @include pattern__line;
+                            }
+                        }
+                        .our-menu__info__title {
+                            @include h2__title;
+                            color: #fff;
+                        }
+                        .our-menu__info__text {
+                            @include main__text;
+                            color: #fff;
+                        }
+                    }
+                    .our-menu__body__menu {
+                        margin-top: 48px;
+                        display: flex;
+                        flex-direction: column;
+                        
+                        row-gap: 20px;
+                        .our-menu__menu__card {
+                            display: flex;
+                            align-items: center;
+                            column-gap: 62px;
+                            .menu__card__img {
+                                img {
+                                    width: 128px;
+                                }
+                            }
+                            .menu__card__info {
+                                max-width: 350px;
+                                .menu__info__title {
+                                    @include main__text;
+                                    margin-bottom: 6px;
+                                    color: #fff;
+                                    letter-spacing: -0.01em;
+                                    
+                                    position: relative;
+                                    
+                                    &::before {
+                                        content: "";
+                                        
+                                        width: 32px;
+                                        height: 1px;
+                                        
+                                        position: absolute;
+                                        top: 50%;
+                                        left: -62px;
+                                        
+                                        background: #9e7f66;
+                                    }
+                                }
+                                .menu__info__text {
+                                    color: #fff;
+                                    line-height: 162%;
+                                }
+                            }
+                        }
+                        .menu__border-line {
+                            width: 100%;
+                            height: 1px;
+                            
+                            background: #fff;
+                            opacity: 0.15;
+                        }
+                    }
+                }
+            }
+        }
+        .events {
+            position: relative;
+            .events__pattern {
+                @include section__pattern;
+                
+                position: absolute;
+                top: 0;
+                left: -350px;
+                
+                border-radius: 0 100px 0 0;
+            }
+            .container {
+                @include container;
+                .events__body {
+                    padding: 160px 0;
+                    display: flex;
+                    justify-content: space-between;
+                    column-gap: 30px;
+                    .events__body__img {
+                        z-index: 1;
+                        position: relative;
+                        box-shadow: 0 75px 100px -50px rgba(56, 66, 85, 0.5);
+                        .events__img__main-img {
+                            display: none;
+                        }
+                        .events__active-img {
+                            display: block;
+                        }
+                        .events__img__pattern {
+                            position: absolute;
+                            top: -38px;
+                            left: -40px;
+                        }
+                    }
+                    .events__body__info {
+                        margin-top: 70px;
+                        .events__info__main-info {
+                            max-width: 445px;
+                            .events__info__title {
+                                @include h2__title;
+                            }
+                            .events__info__text {
+                                @include main__text;
+                                margin-bottom: 30px;
+                                height: 120px;
+                            }
+                            .events__info__btn {
+                                @include main__btn;
+                                margin-bottom: 80px;
+                                background-color: #111;
+                                
+                                &:hover {
+                                    border: 1px solid #111;
+                                }
+                            }
+                        }
+                        .events__list {
+                            display: flex;
+                            flex-direction: column;
+                            row-gap: 12px;
+                            
+                            list-style: none;
+                            .events__list__item {
+                                cursor: pointer;
+                                text-transform: uppercase;
+                                color: #4c4c4c;
+                                font-size: 17px;
+                                font-weight: 600;
+                                line-height: 165%;
+                                letter-spacing: 0.15em;
+                                
+                                position: relative;
+                                opacity: 0.5;
+                            }
+                            .active__list__item {
+                                opacity: 1;
+                                &::before {
+                                    content: "";
+                                    
+                                    position: absolute;
+                                    bottom: 50%;
+                                    left: -125px;
+                                    
+                                    width: 95px;
+                                    height: 1px;
+                                    
+                                    background: #9e7f66;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .reservation {
+            background-image: url(../img/reservation-bg.png);
+            background-repeat: no-repeat;
+            
+            background-size: cover;
+            
+            padding: 88px 0;
+            .container {
+                @include container;
+                .reservation__body {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    .reservation__body__text {
+                        @include h2__title;
+                        color: #fff;
+                        margin: 0;
+                    }
+                    .reservation__btn {
+                        @include main__btn;
+                        
+                        border: 1px solid #fff;
+                        background: transparent;
+                    }
+                }
+            }
+        }
+    }
+    .footer {
+        background: #111;
+        .container {
+            @include container;
+            .footer__body {
+                padding: 77px 0;
+                
+                display: flex;
+                .footer__body__info-wrapper {
+                    margin-left: 192px;
+                    display: flex;
+                    column-gap: 180px;
+                    .footer__body__info {
+                        display: flex;
+                        flex-direction: column;
+                        .footer__info__text {
+                            text-transform: uppercase;
+                            color: #fff;
+                            font-size: 14px;
+                            line-height: 200%;
+                            letter-spacing: 0.14em;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1100px) {
+    body {
+        .header {
+            height: 992px;
+            background: #17192b url(../img/header-bg__tablet.jpg) no-repeat right top;
+            background-size: cover;
+            .container {
+                .header__body {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    padding-top: 374px;
+                    .header__body__info {
+                        text-align: center;
+                        max-width: 573px;
+                        .header__info__title {
+                            margin: 38px 0 20px;
+                            font-size: clamp(48px, 5vw, 64px);
+                        }
+                        .header__info__text {
+                            margin-bottom: 52px;
+                        }
+                        .header__info__btn {
+                            margin: 0 auto;
+                        }
+                    }
+                }
+            }
+        }
+        .main {
+            .enjoyable-place {
+                margin-bottom: 118px;
+                position: relative;
+                .enjoyable-place__pattern {
+                    @include section__pattern;
+                    
+                    position: absolute;
+                    top: 100px;
+                    left: -517px;
+                    
+                    border-radius: 0 100px 0 0;
+                }
+                .container {
+                    .enjoyable-place__body {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        
+                        .enjoyable-place__body__img {
+                            height: 264px;
+                            
+                            transform: translateY(-96px);
+                        }
+                        .enjoyable-place__body__info {
+                            text-align: center;
+                            margin-top: 56px;
+                            max-width: 457px;
+                            
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            .enjoyable-place__info__pattern {
+                                margin-bottom: 40px;
+                            }
+                        }
+                    }
+                }
+            }
+            .locally-food {
+                .locally-food__pattern {
+                    right: -511px;
+                }
+                .container {
+                    .locally-food__body {
+                        height: max-content;
+                        
+                        display: flex;
+                        flex-direction: column-reverse;
+                        align-items: center;
+                        justify-content: space-between;
+                        .locally-food__body__info {
+                            text-align: center;
+                            margin-top: 56px;
+                            margin-bottom: 118px;
+                            
+                            max-width: 457px;
+                            
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            .locally-food__info__pattern {
+                                margin-bottom: 40px;
+                            }
+                        }
+                        .locally-food__body__img {
+                            position: relative;
+                            .locally-food__img {
+                                width: 573px;
+                            }
+                            .locally-food__img__pattern {
+                                position: absolute;
+                                top: 228px;
+                                right: -58px;
+                            }
+                        }
+                    }
+                }
+            }
+            .our-menu {
+                padding: 96px 0;
+                .container {
+                    .our-menu__body {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: space-between;
+                        .our-menu__body__info {
+                            text-align: center;
+                            max-width: 457px;
+                            
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            .our-menu__info__pattern {
+                                margin-bottom: 40px;
+                            }
+                        }
+                        .our-menu__body__menu {
+                            margin-top: 54px;
+                            
+                            row-gap: 24px;
+                            .our-menu__menu__card {
+                                .menu__card__info {
+                                    max-width: 383px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .events {
+                .events__pattern {
+                    top: 0;
+                    left: -517px;
+                }
+                .container {
+                    .events__body {
+                        padding: 120px 0;
+                        flex-direction: column;
+                        align-items: center;
+                        column-gap: 0px;
+                        .events__body__img {
+                            .events__img__pattern {
+                                left: -58px;
+                            }
+                        }
+                        .events__body__info {
+                            text-align: center;
+                            
+                            margin-top: 57px;
+                            
+                            display: grid;
+                            justify-content: center;
+                            .events__info__main-info {
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+                                
+                                justify-self: center;
+                                .events__info__title {
+                                    margin-bottom: 19px;
+                                }
+                                .events__info__text {
+                                    max-width: 457px;
+                                }
+                                .events__info__btn {
+                                    margin-bottom: 0;
+                                }
+                            }
+                            .events__list {
+                                grid-row: 1/2;
+                                
+                                margin-bottom: 55px;
+                                
+                                display: flex;
+                                flex-direction: row;
+                                justify-content: space-between;
+                                row-gap: 0px;
+                                column-gap: 10px;
+                                .events__list__item {
+                                    width: 223px;
+                                }
+                                .active__list__item {
+                                    &::before {
+                                        width: 48px;
+                                        
+                                        bottom: -7px;
+                                        left: calc(50% - 24px);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .reservation {
+                background-image: url(../img/reservation-bg__tablet.jpg);
+                
+                padding: 72px 0 64px;
+                .container {
+                    .reservation__body {
+                        flex-direction: column;
+                        .reservation__body__text {
+                            margin-bottom: 24px;
+                        }
+                    }
+                }
+            }
+        }
+        .footer {
+            .container {
+                .footer__body {
+                    padding: 64px 0;
+                    .footer__body__info-wrapper {
+                        margin-left: 130px;
+                        flex-direction: column;
+                        column-gap: 0px;
+                        row-gap: 32px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        .header {
+            height: 748px;
+            background: #17192b url(../img/header-bg__mobile.jpg) no-repeat right top;
+            background-size: cover;
+            .container {
+                .header__body {
+                    padding-top: 232px;
+                    .logo{
+                        img{
+                            width: 83px;
+                        }
+                    }
+                    .header__body__info {
+                        max-width: 460px;
+                        .header__info__title {
+                            margin: 36px 0 21px;
+                            font-size: clamp(32px, 5vw, 48px);
+                            line-height: 125%
+                        }
+                        .header__info__text {
+                            font-size: 16px;
+                        }
+                        .header__info__btn {
+                            margin: 0 auto;
+                        }
+                    }
+                }
+            }
+        }
+        .main {
+            .enjoyable-place {
+                margin-bottom: 101px;
+                .enjoyable-place__pattern {
+                    display: none;
+                }
+                .container {
+                    .enjoyable-place__body {
+                        .enjoyable-place__body__img {
+                            height: 328px;
+                            
+                            transform: translateY(-72px);
+                        }
+                        .enjoyable-place__body__info {
+                            margin-top: 48px;
+                            .enjoyable-place__info__pattern {
+                                margin-bottom: 36px;
+                            }
+                        }
+                    }
+                }
+            }
+            .locally-food {
+                .locally-food__pattern {
+                    display: none;
+                }
+                .container {
+                    .locally-food__body {
+                        .locally-food__body__info {
+                            margin-top: 48px;
+                            margin-bottom: 101px;                            
+                            
+                            .locally-food__info__pattern {
+                                margin-bottom: 36px;
+                            }
+                        }
+                        .locally-food__body__img {
+                            .locally-food__img {
+                                width: 327px;
+                            }
+                            .locally-food__img__pattern {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+            .our-menu {
+                padding: 72px 0 102px;
+                .container {
+                    .our-menu__body {
+                        .our-menu__body__info {
+                            .our-menu__info__pattern {
+                                margin-bottom: 36px;
+                            }
+                        }
+                        .our-menu__body__menu {
+                            margin-top: 85px;
+                            
+                            row-gap: 24px;
+                            .our-menu__menu__card {
+                                flex-direction: column;
+                                row-gap: 36px;
+                                
+                                text-align: center;
+                                .menu__card__img{
+                                    img{
+                                        width: 327px;
+                                    }
+                                }
+                                .menu__card__info {
+                                    max-width: 100%;
+                                    .menu__info__title{
+                                        &::before{
+                                            display: none;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .events {
+                .events__pattern {
+                    display: none;
+                }
+                .container {
+                    .events__body {
+                        padding: 80px 0 124px;
+                        .events__body__img {
+                            .events__img__pattern {
+                                display: none;
+                            }
+                        }
+                        .events__body__info {
+                            margin-top: 49px;                            
+                            .events__info__main-info {
+                                .events__info__title {
+                                    margin-bottom: 13px;
+                                }
+                                .events__info__text{
+                                    height: 104px;
+                                }
+                            }
+                            .events__list {
+                                margin-bottom: 27px;
+                                
+                                flex-direction: column;
+                                
+                                justify-self: center;
+                                
+                                row-gap: 16px;
+                                column-gap: 0px;
+                                .events__list__item {
+                                    width: 100%;
+                                }
+                                .active__list__item {
+                                    &::before {
+                                        bottom: 0px;
+                                        left: calc(50% - 24px);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .reservation {
+                background-image: url(../img/reservation-bg__mobile.jpg);
+                
+                padding: 84px 0 80px;
+                .container {
+                    .reservation__body {
+                        flex-direction: column;
+                        text-align: center;
+                        .reservation__body__text {
+                            margin-bottom: 20px;
+                        }
+                    }
+                }
+            }
+        }
+        .footer {
+            .container {
+                .footer__body {
+                    padding: 80px 0 78px;
+                    
+                    flex-direction: column;
+                    align-items: center;
+                    .logo{
+                        margin-bottom: 42px;
+                    }
+                    .footer__body__info-wrapper {
+                        text-align: center;
+                        margin-left: 0px;
+                    }
+                }
+            }
+        }
+    }
+}

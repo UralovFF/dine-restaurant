@@ -1,0 +1,93 @@
+@mixin container{
+    max-width: 1158px;
+    height: 100%;
+    
+    margin: 0 auto;
+    padding: 0 24px;
+    @media (max-width: 1100px) {
+        padding: 0 40px;
+    }
+    @media (max-width: 768px) {
+        padding: 0 24px;
+    }
+}
+
+@mixin main__btn{
+    width: 245px;
+    height: 64px;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    
+    &:hover{
+        background: #fff;
+        color: #111;
+    }
+}
+
+@mixin h2__title{
+    margin-bottom: 27px;
+    color: #242b37;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 100%;
+    letter-spacing: -0.01em;
+    
+    @media (max-width: 768px) {
+        font-size: 32px;
+        line-height: 125%;
+    }
+}
+
+@mixin main__text{
+    font-size: 20px;
+    line-height: 150%;
+    
+    @media (max-width: 768px){
+        font-size: 16px;
+        line-height: 162%;
+    }
+}
+
+@mixin info__pattern{
+    margin-bottom: 55px;
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+}
+
+@mixin pattern__oval{
+    width: 7px;
+    height: 7px;
+    
+    border: 1px solid #9E7F66;
+    border-radius: 100%;
+}
+
+@mixin pattern__line{
+    width: 56px;
+    height: 1px;
+    
+    background: #9e7f66;
+}
+
+@mixin section__pattern{
+    width: 895px;
+    height: 320px;
+    
+    background: #5c6779;
+    opacity: 0.08;
+}
+
+@mixin booking__text{
+    font-size: 20px;
+    line-height: 140%;
+    color: #111;
+}
